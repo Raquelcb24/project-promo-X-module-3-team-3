@@ -1,10 +1,15 @@
-function Form(form) {
+import Button from "./Button";
+
+
+function Form({form}) {
   
     const handleInputChange =(event)=>{
       const id = event.target.id;
       const value = event.target.value;
       form(id, value);
     }
+
+
   return (
     <form className="addForm">
       <h2 className="title">Información</h2>
@@ -27,10 +32,8 @@ function Form(form) {
       </fieldset>
 
       <fieldset className="addForm__group--upload">
-        <label htmlFor="image" className="button">Subir foto del proyecto</label>
-        <input className="addForm__hidden" type="file" name="image" id="image"/>
-        <label htmlFor="photo" className="button">Subir foto de la autora</label>
-        <input className="addForm__hidden" type="file" name="photo" id="photo"/>
+        <Button htmlFor= "image" className="button" labelText="Subir foto del proyecto" classNameInput="addForm__hidden" type="file" name="image" id="image"/>
+        <Button htmlFor= "photo" className="button" labelText="Subir foto de la autora" classNameInput="addForm__hidden" type="file" name="photo" id="photo"/>
         <button className="button--large">Guardar proyecto</button>
       </fieldset>
       

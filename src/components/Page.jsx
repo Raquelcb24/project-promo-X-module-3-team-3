@@ -1,10 +1,15 @@
 import Form from './Form';
 import Preview from './Preview';
 import {useState} from 'react';
+import GetAvatar from "./GetAvatar";
 
 function Page() {
 
   const [data, setData] = useState({name:"", slogan:"", technologies:"", repo:"", demo:"", desc:"", autor:"", job:"", image:"", photo:""});
+  const [avatar, setAvatar] = useState('');
+  const updateAvatar = (avatar) => {
+    setAvatar(avatar);
+  };
 
   // const changeForm. Debe recibir como parametro id y value del input para que dentro se haga el setForm. Se ejecuta en Form, cuando ocurra el evento en los inputs. Dentro de handleInputChange se ejecuta changeForm
 
@@ -38,6 +43,7 @@ function Page() {
     <main className="main">
     <Preview formData={data} />
     <Form form={changeForm}/>
+    <GetAvatar avatar={avatar} updateAvatar={updateAvatar}/>
   </main>
   )
 }

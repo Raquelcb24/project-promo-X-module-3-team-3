@@ -1,4 +1,4 @@
-function Card(formData) {
+function Card({formData}) {
   
   return (
     <section className="preview">
