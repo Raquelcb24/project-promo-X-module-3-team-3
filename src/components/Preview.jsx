@@ -9,7 +9,7 @@ function Preview({formData}) {
       <p className="hero__text">Escaparate en línea para recoger ideas a través de la tecnología</p>
       <a className="button--link" href="./">Ver proyectos</a>
     </section>
-        <Card formData={formData}/>
+        <Card formData={formData} />
     </div>
   )
 }

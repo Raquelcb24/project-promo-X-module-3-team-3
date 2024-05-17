@@ -1,11 +1,10 @@
-// 1- Aplicar el destructuring de todas las props que recibe button
-// 2- En el button del return cambiar por la props correspondiente
+
 // 3- La funcion de update avatar debe estar creada donde tenga la variable de estado en page, esa funcion va a modificar la propiedad del objeto que corresponda o a la imagen de la autora o a la imagen del proyecto
 
 import React from 'react';
 
 
-function Button({ updateAvatar, text='Get avatar!'}) {
+function Button({ updateAvatar, labelText, id}) {
   // creamos una propiedad de la clase que es la que vamos a usar en varios métodos para cargar la imagen
   // esto es un manejador de ficheros
   const fr = new FileReader();
@@ -57,13 +56,13 @@ function Button({ updateAvatar, text='Get avatar!'}) {
 
     // aquí hago lifting con los datos del fichero
     // lo que haga el componente madre con esta información es otro problema diferente
-    updateAvatar(image);
+    updateAvatar(id, image);
   };
 
   return (
     <div>
-        <label htmlFor={props.id} className="button">{props.labelText}</label>
-        <input className="addForm__hidden" type="file" name={props.id}  id={props.id}/>
+        <label htmlFor={id} className="button">{labelText}</label>
+        <input className="addForm__hidden" type="file" name={id}  id={id} onChange={uploadImage}  ref={myFileField}/>
     </div>
   )
 }
