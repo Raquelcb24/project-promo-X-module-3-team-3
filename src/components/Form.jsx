@@ -32,8 +32,8 @@ function Form({form}) {
       </fieldset>
 
       <fieldset className="addForm__group--upload">
-        <Button htmlFor= "image" className="button" labelText="Subir foto del proyecto" classNameInput="addForm__hidden" type="file" name="image" id="image"/>
-        <Button htmlFor= "photo" className="button" labelText="Subir foto de la autora" classNameInput="addForm__hidden" type="file" name="photo" id="photo"/>
+        <Button  labelText="Subir foto del proyecto"   id="image"/>
+        <Button  labelText="Subir foto de la autora"   id="photo"/>
         <button className="button--large">Guardar proyecto</button>
       </fieldset>
       
