@@ -1,13 +1,27 @@
-function Card(formData) {
+//importar la imagen 
+import proyect from '../images/ebook-example.jpg';
+import autor from '../images/avatar.webp';
+
+
+function Card({formData}) {
   
+  const imageProyect = formData.image === "" ? proyect : formData.image;
+
+  const imageAutor = formData.photo === "" ? autor : formData.photo;
+
+
   return (
     <section className="preview">
-      <div className="projectImage"></div>
+      <div className="projectImage" style={{ backgroundImage: `url(${imageProyect})` }}>
+    
+      </div>
       <article className="card">
         <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
 
         <div className="card__author">
-          <div className="card__authorPhoto"></div>
+          <div className="card__authorPhoto" style={{ backgroundImage: `url(${imageAutor})` }}>
+ 
+          </div>
           <p className="card__job">{ formData.job || "Full stack Developer"}</p>
           <h3 className="card__name">{formData.autor || "Emmelie Bjôrklund"}</h3>
         </div>

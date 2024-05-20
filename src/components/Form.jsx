@@ -1,37 +1,48 @@
-function Form(form) {
+import Button from "./Button";
+
+
+function Form({form, updateAvatar, formData, postData, url}) {
   
     const handleInputChange =(event)=>{
       const id = event.target.id;
       const value = event.target.value;
       form(id, value);
     }
+     const handleClickUrl =(event)=>{
+      event.preventDefault();
+      postData();
+      
+    }
+
+     
+    
+
   return (
     <form className="addForm">
-      <h2 className="title">Información</h2>
+      <h2 className="title">¡Te invitamos a nuestra boda!</h2>
       <fieldset className="addForm__group">
-        <legend className="addForm__title">Cuéntanos sobre el proyecto</legend>
-        <input className="addForm__input" type="text" name="name" id="name" placeholder="Nombre del proyecto" onChange={handleInputChange}/>
-        <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Slogan" onChange={handleInputChange}/>
+        <legend className="addForm__title">Te contamos sobre el encuentro</legend>
+        <input className="addForm__input" type="text" value={formData.name} name="name" id="name" placeholder="Nombre de los invitados" onChange={handleInputChange}/>
+        <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Fecha del enlace" value={formData.slogan} onChange={handleInputChange}/>
         <div className="addForm__2col">
-          <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Repositorio" onChange={handleInputChange}/>
-          <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Demo" onChange={handleInputChange}/>
+          <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Comparte la url de la ubicación del evento" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
+          <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Indica la url lista de regalos" onChange={handleInputChange}/>
         </div>         
-        <input className="addForm__input" type="text" name="technologies" id="technologies" placeholder="Tecnologías" onChange={handleInputChange}/>
-        <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Descripción" rows="5" onChange={handleInputChange}></textarea>
+        <input className="addForm__input" type="text" value={formData.technologies} name="technologies" id="technologies" placeholder="Escribe aquí la ubicación." onChange={handleInputChange}/> {/* podría ser un select de si necesitas bus o no */}
+        <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Dedica unas palabras a tus invitados" value={formData.desc} rows="5" onChange={handleInputChange}></textarea>
       </fieldset>
 
       <fieldset className="addForm__group">
-        <legend className="addForm__title">Cuéntanos sobre la autora</legend>
-        <input className="addForm__input" type="text" name="autor" id="autor" placeholder="Nombre" onChange={handleInputChange}/>
-        <input className="addForm__input" type="text" name="job" id="job" placeholder="Trabajo" onChange={handleInputChange}/>
+        <legend className="addForm__title">Cuéntanos sobre el enlace</legend>
+        <input className="addForm__input" type="text" value={formData.autor} name="autor" id="autor" placeholder="Vuestros nombres" onChange={handleInputChange}/>
+        <input className="addForm__input" type="text" value={formData.job} name="job" id="job" placeholder="Una frase que os represente. Ej: ¡Hasta el infinito y más alla!" onChange={handleInputChange}/>
       </fieldset>
 
       <fieldset className="addForm__group--upload">
-        <label htmlFor="image" className="button">Subir foto del proyecto</label>
-        <input className="addForm__hidden" type="file" name="image" id="image"/>
-        <label htmlFor="photo" className="button">Subir foto de la autora</label>
-        <input className="addForm__hidden" type="file" name="photo" id="photo"/>
-        <button className="button--large">Guardar proyecto</button>
+        <Button  labelText="Subir foto del proyecto"   id="image"updateAvatar={updateAvatar}/>
+        <Button  labelText="Subir foto de la autora"   id="photo" updateAvatar={updateAvatar}/>
+        <button className="button--large" onClick= {handleClickUrl}>Crear invitación</button>
+        <p>{url}</p>
       </fieldset>
       
     </form>

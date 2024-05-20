@@ -2,9 +2,17 @@ import Form from './Form';
 import Preview from './Preview';
 import {useState} from 'react';
 
+
 function Page() {
 
   const [data, setData] = useState({name:"", slogan:"", technologies:"", repo:"", demo:"", desc:"", autor:"", job:"", image:"", photo:""});
+
+  const [url, setUrl] = useState('');
+ 
+
+  const updateAvatar = (key, value) => {
+    setData({...data, [key]: value});
+  };
 
   // const changeForm. Debe recibir como parametro id y value del input para que dentro se haga el setForm. Se ejecuta en Form, cuando ocurra el evento en los inputs. Dentro de handleInputChange se ejecuta changeForm
 
@@ -32,12 +40,37 @@ function Page() {
     }else if(id === "job"){
       setForm({...form, job: value})
     } */
+
+
+   
   };
+
+  const postData = () =>{
+    fetch('https://dev.adalab.es/api/projectCard',{
+        method:'POST',
+        headers:{'content-type':'application/json'},
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(dataResponse => {
+        console.log(dataResponse);
+
+        if(dataResponse.success){
+            setUrl(dataResponse.cardURL);
+        }else if (dataResponse.error){
+            setUrl("Debes rellenar todos los campos");
+        }
+
+        
+        
+    })
+}
 
   return (
     <main className="main">
-    <Preview formData={data} />
-    <Form form={changeForm}/>
+    <Preview formData={data}/>
+    <Form formData={data} form={changeForm} updateAvatar={updateAvatar} postData={postData} url={url}/>
+ 
   </main>
   )
 }
