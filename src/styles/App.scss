@@ -16,12 +16,12 @@
     --color-black-80: rgba(0, 0, 0, 0.8);
     --color-greyish-brown: #505050;
     --color-greyish-brown-88: rgba(62, 62, 62, 0.88);
-    --color-dusk: #403a5f;
+    --color-dusk: #8E998B;
     --color-greyish-brown-two: #575757;
-    --color-dark: #302c42;
+    --color-dark: #E4C3BA;
     --color-warm-grey: #909090;
     --color-white: #ffffff;
-    --color-dark-lilac: #8176af;
+    --color-dark-lilac: #B87E70;
     --color-white-50: rgba(255, 255, 255, 0.5);
   
   
@@ -252,7 +252,7 @@
   
     box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
     border: solid 1px rgba(0, 0, 0, 0);
-    background-image: radial-gradient(circle at 50% 50%, var(--color-dusk), #211e2e 92%);
+    background-image: radial-gradient(circle at 50% 50%, var(--color-dusk), #666E63 92%);
   }
   
   .addForm .title {
@@ -389,7 +389,7 @@
     text-align: center;
   
     border-radius: 40px;
-    background-image: linear-gradient(to right, var(--color-dark-lilac) -2%, #c0b7e8 98%);
+    background-image: linear-gradient(to right, var(--color-dark-lilac) -2%, #E4C3BA 98%);
   
     cursor: pointer;
   }

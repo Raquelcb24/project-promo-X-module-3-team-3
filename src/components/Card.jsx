@@ -11,7 +11,7 @@ function Card(formData) {
           <p className="card__job">{ formData.job || "Full stack Developer"}</p>
           <h3 className="card__name">{formData.autor || "Emmelie Bjôrklund"}</h3>
         </div>
-    
+  
         <div className="card__project">            
           <h3 className="card__name">{formData.name || "Elegant Workspace"}</h3>
           <p className="card__slogan">{formData.slogan || "Diseños Exclusivos"}</p>
