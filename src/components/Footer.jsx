@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer">
         <img className="logoSponsor" src={logoSponsor} alt="Logo Adalab"/>
-      </footer>
+    </footer>
   )
 }
 
