@@ -1,6 +1,7 @@
 import Form from './Form';
 import Preview from './Preview';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
+import local from "../services/localStorage"
 
 
 function Page() {
@@ -40,8 +41,6 @@ function Page() {
     }else if(id === "job"){
       setForm({...form, job: value})
     } */
-
-
    
   };
 
@@ -61,10 +60,13 @@ function Page() {
             setUrl("Debes rellenar todos los campos");
         }
 
-        
-        
     })
+
 }
+
+useEffect (()=>{
+  local.set("card", data)
+}, [data])
 
   return (
     <main className="main">

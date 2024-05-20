@@ -286,7 +286,7 @@
     margin-bottom: -2px;
     border-radius: inherit;
     background-color: transparent;
-    background-image: linear-gradient(to left, transparent, #343045 25%, #c0b7e8 45%, var(--color-dark-lilac) 65%, #343045 75%, transparent );
+    background-image: linear-gradient(to left, transparent, #E4C3BA 25%, #E4C3BA 45%, var(--color-dark-lilac) 65%, #E4C3BA 75%, transparent );
   }
   
   .addForm .addForm__group {
@@ -370,7 +370,7 @@
     backdrop-filter: blur(10px);
     border-style: solid;
     border-width: 1px;
-    border-image-source: linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
+    border-image-source: linear-gradient(to bottom,  0%, rgba(0, 0, 0, 0));
     border-image-slice: 1;
     border-radius: 20px;
     background-color: var(--color-dark-lilac);
@@ -415,7 +415,7 @@
   
     border-radius: 40px;
     background-color: transparent;
-    background-image: linear-gradient(to right, var(--color-dark-lilac) -2%, #c0b7e8 98%);
+    background-image: linear-gradient(to right, var(--color-dark-lilac) -2%, #E4C3BA 98%);
   
     cursor: pointer;
   }
