@@ -41,7 +41,7 @@ function Form({form, updateAvatar, formData, postData, url}) {
       <fieldset className="addForm__group--upload">
         <Button  labelText="Subir foto del proyecto"   id="image"updateAvatar={updateAvatar}/>
         <Button  labelText="Subir foto de la autora"   id="photo" updateAvatar={updateAvatar}/>
-        <button className="button--large" onClick= {handleClickUrl}>Guardar proyecto</button>
+        <button className="button--large" onClick= {handleClickUrl}>Crear invitación</button>
         <p>{url}</p>
       </fieldset>
       
