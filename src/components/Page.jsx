@@ -6,6 +6,8 @@ import {useState} from 'react';
 function Page() {
 
   const [data, setData] = useState({name:"", slogan:"", technologies:"", repo:"", demo:"", desc:"", autor:"", job:"", image:"", photo:""});
+
+  const [url, setUrl] = useState('');
  
 
   const updateAvatar = (key, value) => {
@@ -38,12 +40,36 @@ function Page() {
     }else if(id === "job"){
       setForm({...form, job: value})
     } */
+
+
+   
   };
+
+  const postData = () =>{
+    fetch('https://dev.adalab.es/api/projectCard',{
+        method:'POST',
+        headers:{'content-type':'application/json'},
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(dataResponse => {
+        console.log(dataResponse);
+
+        if(dataResponse.success){
+            setUrl(dataResponse.cardURL);
+        }else if (dataResponse.error){
+            setUrl("Debes rellenar todos los campos");
+        }
+
+        
+        
+    })
+}
 
   return (
     <main className="main">
     <Preview formData={data}/>
-    <Form formData={data} form={changeForm} updateAvatar={updateAvatar}/>
+    <Form formData={data} form={changeForm} updateAvatar={updateAvatar} postData={postData} url={url}/>
  
   </main>
   )

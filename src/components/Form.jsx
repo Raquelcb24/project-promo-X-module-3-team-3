@@ -1,14 +1,21 @@
 import Button from "./Button";
 
 
-function Form({form, updateAvatar, formData}) {
+function Form({form, updateAvatar, formData, postData, url}) {
   
     const handleInputChange =(event)=>{
       const id = event.target.id;
       const value = event.target.value;
       form(id, value);
     }
+     const handleClickUrl =(event)=>{
+      event.preventDefault();
+      postData();
+      
+    }
 
+     
+    
 
   return (
     <form className="addForm">
@@ -34,7 +41,8 @@ function Form({form, updateAvatar, formData}) {
       <fieldset className="addForm__group--upload">
         <Button  labelText="Subir foto del proyecto"   id="image"updateAvatar={updateAvatar}/>
         <Button  labelText="Subir foto de la autora"   id="photo" updateAvatar={updateAvatar}/>
-        <button className="button--large">Guardar proyecto</button>
+        <button className="button--large" onClick= {handleClickUrl}>Guardar proyecto</button>
+        <p>{url}</p>
       </fieldset>
       
     </form>
