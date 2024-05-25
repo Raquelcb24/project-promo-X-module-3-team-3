@@ -89,7 +89,7 @@
   
   .header .header__title {
     font: var(--font-title-brand);
-    font-size: 50px;
+    font-size: 20px;
     text-transform: capitalize;
     color: #615E4E;
   }
@@ -137,8 +137,8 @@
   
   .card {
     display: grid;
-    grid-template-columns: 40% 60%;
-    width: 400px;
+    grid-template-columns: 30% 70%;
+    width: 250px;
     color: var(--color-black);
     font: var(--font-card-text);
   
@@ -194,7 +194,7 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-image: url('../images/avatarWedding.jpeg');
+    background-image: url('../images/perretes1.jpeg');
     background-position: center;
     background-size: cover;
     margin-bottom: 0.8rem;

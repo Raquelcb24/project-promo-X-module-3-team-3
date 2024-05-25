@@ -134,7 +134,7 @@
     aspect-ratio: 1 / 1;
     outline: solid 1px pink;
   
-    background-image: url('../images/ebook-example.jpg'); 
+    background-image: url('../images/perretes11.jpeg'); 
     background-position: top center;
     background-size: cover;  
   } 
@@ -152,7 +152,7 @@
   
   .card {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 30% 70%;
   
     color: var(--color-black);
     font: var(--font-card-text);
@@ -167,6 +167,7 @@
     background-image: linear-gradient(to bottom, var(--color-white), var(--color-white)), linear-gradient(to bottom, var(--color-white) 0%, rgba(0, 0, 0, 0));
     background-origin: border-box;
     background-clip: content-box, border-box;
+
   }
   
   .card .card__projectTitle {
@@ -209,7 +210,7 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-image: url('../images/avatar.webp');
+    background-image: url('../images/perretes10.jpeg');
     background-position: center;
     background-size: cover;
     margin-bottom: 0.8rem;

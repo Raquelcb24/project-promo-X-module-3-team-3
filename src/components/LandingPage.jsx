@@ -1,140 +1,46 @@
-import '../styles/App.scss';
-import Header from './Header';
-import Card from './Card';
-import Footer from './Footer';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import Card from "./Card";
+import exampleDog from '../images/perretes1.jpeg';
+import '../styles/Landing.scss';
 
 const LandingPage = () => {
+  const cardsData = [
+    {
+      image: {exampleDog},
+      photo: "path/to/photo1.jpg",
+      job: "Developer",
+      autor: "Author 1",
+      name: "Project 1",
+      slogan: "Slogan 1",
+      desc: "Description 1",
+      technologies: "Tech 1",
+      demo: "Demo link 1",
+      repo: "Repo link 1"
+    },
+    {
+      image: "path/to/image2.jpg",
+      photo: "path/to/photo2.jpg",
+      job: "Designer",
+      autor: "Author 2",
+      name: "Project 2",
+      slogan: "Slogan 2",
+      desc: "Description 2",
+      technologies: "Tech 2",
+      demo: "Demo link 2",
+      repo: "Repo link 2"
+    }
+    // Puedes agregar más objetos de datos según sea necesario
+  ];
   return (
     <>
-        <body className="container">
-      {/* <header className="header">
-        <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
-          <img className="header__companyLogo" src="./src/images/logo.png" alt="Logo proyectos molones"/>
-          <h1 className="header__title">Ada_Moon_Wedding</h1>
-        </a>
-        <img className="logoSponsor" src="./src/images/logo-wedding.jpeg" alt="Logo Adalab"/>
-    </header> */}
-    <main className="main">
-      <section className="preview">
-        <div className="projectImage"></div>
-        <article className="card">
-          <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
+      <main className="main">
+        {cardsData.map((cardData, index) => (
+            <Card key={index} formData={cardData} />
+          ))}
+
+      </main>
+      <Link to="/main">Crea tu propia invitación de boda</Link>
   
-          <div className="card__author">
-            <div className="card__authorPhoto"></div>
-            <p className="card__job"></p>
-            <h3 className="card__name"></h3>
-          </div>
-      
-          <div className="card__project">            
-            <h3 className="card__name"></h3>
-            <p className="card__slogan"></p>
-            <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione </p>
-  
-            <div className="card__technicalInfo">
-              <p className="card__technologies"></p>
-          
-              <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online"></a>
-              <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto"></a>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section className="preview">
-        <div className="projectImage"></div>
-        <article className="card">
-          <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
-  
-          <div className="card__author">
-            <div className="card__authorPhoto">
-   
-            </div>
-            <p className="card__job"></p>
-            <h3 className="card__name"></h3>
-          </div>
-      
-          <div className="card__project">            
-            <h3 className="card__name"></h3>
-            <p className="card__slogan"></p>
-            <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione </p>
-  
-            <div className="card__technicalInfo">
-              <p className="card__technologies"></p>
-          
-              <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online"><i className="fa-solid fa-location-dot"></i></a>
-              <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto"></a>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section className="preview">
-        <div className="projectImage">
-      
-        </div>
-        <article className="card">
-          <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
-  
-          <div className="card__author">
-            <div className="card__authorPhoto">
-   
-            </div>
-            <p className="card__job"></p>
-            <h3 className="card__name"></h3>
-          </div>
-      
-          <div className="card__project">            
-            <h3 className="card__name"></h3>
-            <p className="card__slogan"></p>
-            <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione </p>
-  
-            <div className="card__technicalInfo">
-              <p className="card__technologies"></p>
-          
-              <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online"></a>
-              <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto"></a>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section className="preview">
-        <div className="projectImage">
-      
-        </div>
-        <article className="card">
-          <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
-  
-          <div className="card__author">
-            <div className="card__authorPhoto">
-   
-            </div>
-            <p className="card__job"></p>
-            <h3 className="card__name"></h3>
-          </div>
-      
-          <div className="card__project">            
-            <h3 className="card__name"></h3>
-            <p className="card__slogan"></p>
-            <h3 className="card__descriptionTitle">Product description</h3>
-            <p className="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione </p>
-  
-            <div className="card__technicalInfo">
-              <p className="card__technologies"></p>
-          
-              <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online"></a>
-              <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto"></a>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
-  {/*   <footer className="footer">
-      <img className="logoSponsor" src="./src/images/logo-wedding.jpeg" alt="Logo Adalab"/>
-    </footer> */}
-</body>
     </>
    
   );

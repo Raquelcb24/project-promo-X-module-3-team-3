@@ -1,6 +1,6 @@
 //importar la imagen 
 import proyect from '../images/ebook-example.jpg';
-import autor from '../images/avatar.webp';
+import autor from '../images/perretes2.jpeg';
 
 
 function Card({formData}) {

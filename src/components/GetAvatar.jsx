@@ -1,5 +1,5 @@
 import React from 'react';
-import defaultAvatar from '../images/avatar.webp';
+import defaultAvatar from '../images/perretes2.jpeg';
 
 function GetAvatar({avatar=defaultAvatar, updateAvatar, text='Get avatar!'}) {
   // creamos una propiedad de la clase que es la que vamos a usar en varios métodos para cargar la imagen
