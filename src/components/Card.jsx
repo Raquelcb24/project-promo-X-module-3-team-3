@@ -1,5 +1,5 @@
 
-import proyect from '../images/example.jpg';
+import proyect from '../images/perretes1.jpeg';
 import autor from '../images/avatar2.jpeg'; 
 
 
@@ -8,6 +8,8 @@ function Card({formData}) {
   const imageProyect = formData.image === "" ? proyect : formData.image;
 
   const imageAutor = formData.photo === "" ? autor : formData.photo;
+
+  console.log(formData.image)
 
 
   return (
@@ -34,8 +36,13 @@ function Card({formData}) {
 
           <div className="card__technicalInfo">
             <p className="card__technologies">Contacto: {formData.technologies || "666 555 444"}</p>
-              <a className="icon icon__www" href="#" title="Haz click para ver la ubicación del evento">{formData.demo || "Web link"}</a>
-              <a className="icon icon__github" href="#" title="Haz click para ver el listado de regalos">{formData.repo || "Web link"}</a>
+
+              
+              <a className="icon icon__github" href={formData.repo || ""} title="Haz click para ver el listado de regalos"><span className="material-symbols-outlined">
+              distance </span>{"Ubicación"}</a>
+
+              <a className="icon icon__www" href={formData.demo || ""} title="Haz click para ver la ubicación del evento" ><span className="material-symbols-outlined">
+              featured_seasonal_and_gifts</span>{"Regalos"}</a>
 
         
             

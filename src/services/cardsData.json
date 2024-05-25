@@ -2,7 +2,7 @@
 
 [
     {
-      "image": "/images/perretes3.png",
+      "image": "/images/perretes3.jpeg",
       "photo": "/images/ebook-example.jpg",
       "job": "Somos un combo ganador!",
       "autor": "Carlos y Raquel",
@@ -14,8 +14,8 @@
       "repo": "https://github.com/example/repo1"
     },
     {
-      "image": "images/perretes2.jpeg",
-      "photo": "images/perretes4.jpeg",
+      "image": "/images/perretes2.jpeg",
+      "photo": "/images/perretes4.jpeg",
       "job": "Amor, confianza, respeto, felicidad: ¡nuestro mantra!",
       "autor": "Valentina y Fátima",
       "name": "Ana y Antonio",
@@ -26,8 +26,8 @@
       "repo": "https://github.com/example/repo2"
     },
     {
-      "image": "images/perretes5.jpeg",
-      "photo": "images/perretes6.jpeg",
+      "image": "/images/perretes5.jpeg",
+      "photo": "/images/perretes6.jpeg",
       "job": "Juntos: amor, confianza, respeto, felicidad.",
       "autor": "Fernando y Antonio",
       "name": "Carmen y Lola",
@@ -38,8 +38,8 @@
       "repo": "https://github.com/example/repo3"
     },
     {
-        "image": "images/perretes7.jpeg",
-        "photo": "images/perretes8.jpeg",
+        "image": "/images/perretes7.jpeg",
+        "photo": "/images/perretes8.jpeg",
         "job": "Amor, confianza, respeto, felicidad: ¡nuestra esencia!",
         "autor": "Juana y Alba",
         "name": "Manuel y Antonio",

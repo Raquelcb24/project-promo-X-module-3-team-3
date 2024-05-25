@@ -7,9 +7,9 @@ function Header() {
     <header className="header">
           <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
        
-            <h1 className="header__title">Ada_Moon_Wedding</h1>
+            <a className="header__title" href="/">Ada_Moon_Wedding</a>
           </a>
-          <img className="logoSponsor" src={logoSponsor} alt="Logo"/>
+          <a href="/"><img className="logoSponsor" src={logoSponsor} alt="Logo"/></a>
     </header>
   )
 }

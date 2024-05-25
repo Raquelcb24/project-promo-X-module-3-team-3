@@ -136,7 +136,7 @@
     aspect-ratio: 1 / 1;
     outline: solid 1px pink;
   
-    /* background-image: url('../images/perretes1.jng');  */
+    // background-image: url('../images/perretes1.jpeg');  
     background-position: top center;
     background-size: cover;  
   } 
@@ -450,9 +450,22 @@
   }
   
   .icon__www {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #000000;
+    gap: 70px;
+    
     /* background-image: url('../images/icons/globe-solid.svg'); */
   }
   
   .icon__github {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #000000;
+    gap: 60px;
+   
   /*   background-image: url('../images/icons/github.svg'); */
+  }
+  a{
+    text-decoration: none;
   }
