@@ -34,7 +34,6 @@ function Card({formData}) {
 
           <div className="card__technicalInfo">
             <p className="card__technologies">Contacto: {formData.technologies || "666 555 444"}</p>
-          
               <a className="icon icon__www" href="#" title="Haz click para ver la ubicación del evento">{formData.demo || "Web link"}</a>
               <a className="icon icon__github" href="#" title="Haz click para ver el listado de regalos">{formData.repo || "Web link"}</a>
 
