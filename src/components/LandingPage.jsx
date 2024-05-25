@@ -2,7 +2,6 @@
 import { Link } from 'react-router-dom';
 import Card from './Card';
 import cardsData from '../services/cardsData.json';
-import '../styles/Landing.scss';
 import { useEffect, useState } from 'react';
 
 const LandingPage = () => {
