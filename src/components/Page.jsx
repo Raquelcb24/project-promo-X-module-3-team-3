@@ -8,6 +8,7 @@ function Page() {
 
   const [data, setData] = useState({name:"", slogan:"", technologies:"", repo:"", demo:"", desc:"", autor:"", job:"", image:"", photo:""});
 
+
   const [url, setUrl] = useState('');
  
 
@@ -64,9 +65,22 @@ function Page() {
 
 }
 
+const loadDataFromLocalStorage = () => {
+  const storedData = local.get("card", null);
+  if (storedData) {
+    setData(storedData);
+  }
+};
+
+useEffect(() => {
+  loadDataFromLocalStorage();
+}, []);
+
 useEffect (()=>{
-  local.set("card", data)
-}, [data])
+ if (data.name || data.slogan || data.technologies || data.repo || data.demo || data.desc || data.autor || data.job || data.image || data.photo) {
+    local.set("card", data);
+  }
+}, [data]);
 
   return (
     <main className="main">
