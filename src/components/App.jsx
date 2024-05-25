@@ -1,5 +1,4 @@
 import '../styles/App.scss';
-import '../styles/Landing.scss';
 import Header from './Header';
 import Footer from './Footer';
 import LandingPage from './LandingPage';

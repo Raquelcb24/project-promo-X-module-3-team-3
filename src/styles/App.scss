@@ -134,7 +134,7 @@
     aspect-ratio: 1 / 1;
     outline: solid 1px pink;
   
-    background-image: url('../images/perretes11.jpeg'); 
+    /* background-image: url('../images/perretes11.jpeg');  */
     background-position: top center;
     background-size: cover;  
   } 
@@ -210,7 +210,7 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background-image: url('../images/perretes10.jpeg');
+    /* background-image: url('../images/perretes10.jpeg'); */
     background-position: center;
     background-size: cover;
     margin-bottom: 0.8rem;
@@ -360,7 +360,7 @@
   .button--link {
     display: block;
     width: fit-content;
-  
+    
     margin-inline: auto;
     margin-block: 8px;
     padding: 5px 18px;
@@ -422,11 +422,15 @@
   
     cursor: pointer;
   }
-  
+  .button a{
+    text-decoration: none;
+  }
   .button--large:hover {
     border-color: var(--color-white);
   }
-  
+  .link{
+    text-decoration: none;
+  }
   /* ICONS */
   
   .icon {
@@ -439,9 +443,9 @@
   }
   
   .icon__www {
-    background-image: url('../images/icons/globe-solid.svg');
+    /* background-image: url('../images/icons/globe-solid.svg'); */
   }
   
   .icon__github {
-    background-image: url('../images/icons/github.svg');
+  /*   background-image: url('../images/icons/github.svg'); */
   }

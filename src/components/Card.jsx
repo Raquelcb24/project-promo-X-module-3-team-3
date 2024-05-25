@@ -1,6 +1,6 @@
-//importar la imagen 
-import proyect from '../images/ebook-example.jpg';
-import autor from '../images/perretes2.jpeg';
+
+import proyect from '../images/example.jpg';
+import autor from '../images/avatar2.jpeg'; 
 
 
 function Card({formData}) {
@@ -16,27 +16,27 @@ function Card({formData}) {
     
       </div>
       <article className="card">
-        <h2 className="card__projectTitle"><span className="card__projectTitle--text">Personal project card</span></h2>
+        <h2 className="card__projectTitle"><span className="card__projectTitle--text">¡OS INVITAMOS A NUESTRA BODA!</span></h2>
 
         <div className="card__author">
           <div className="card__authorPhoto" style={{ backgroundImage: `url(${imageAutor})` }}>
  
           </div>
-          <p className="card__job">{ formData.job || "Full stack Developer"}</p>
-          <h3 className="card__name">{formData.autor || "Emmelie Bjôrklund"}</h3>
+          <p className="card__job">{ formData.job || "¡Hasta el infinito y más allá!"}</p>
+          <h3 className="card__name">{formData.autor || "Vuestros nombres"}</h3>
         </div>
   
         <div className="card__project">            
-          <h3 className="card__name">{formData.name || "Elegant Workspace"}</h3>
-          <p className="card__slogan">{formData.slogan || "Diseños Exclusivos"}</p>
-          <h3 className="card__descriptionTitle">Product description</h3>
-          <p className="card__description">{formData.desc || "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, quos? Itaque, molestias eveniet laudantium adipisci vitae ratione"} </p>
+          <h3 className="card__name">{formData.name || "Nombre de los invitados"}</h3>
+          <p className="card__slogan">{formData.slogan || "Fecha del enlace"}</p>
+          <h3 className="card__descriptionTitle">Información del evento</h3>
+          <p className="card__description">{formData.desc || "Unas bonitas palabras para tus invitados"} </p>
 
           <div className="card__technicalInfo">
-            <p className="card__technologies">{formData.technologies || "React JS - HTML - CSS"}</p>
+            <p className="card__technologies">Contacto: {formData.technologies || "666 555 444"}</p>
         
-            <a className="icon icon__www" href="#" title="Haz click para ver el proyecto online">{formData.demo || "Web link"}</a>
-            <a className="icon icon__github" href="#" title="Haz click para ver el código del proyecto">{formData.repo || "GitHub link"}</a>
+            <a className="icon icon__www" href="#" title="Haz click para ver la ubicación del evento">{formData.demo || "Web link"}</a>
+            <a className="icon icon__github" href="#" title="Haz click para ver el listado de regalos">{formData.repo || "Web link"}</a>
           </div>
         </div>
       </article>
