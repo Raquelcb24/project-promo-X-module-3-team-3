@@ -14,11 +14,11 @@
   
     --color-black: #000000;
     --color-black-80: rgba(0, 0, 0, 0.8);
-    --color-greyish-brown: #505050;
+    --color-greyish-brown: #585E48;
     --color-greyish-brown-88: rgba(62, 62, 62, 0.88);
     --color-dusk: #8E998B;
     --color-greyish-brown-two: #575757;
-    --color-dark: #E4C3BA;
+    --color-dark: #FFF0EC;
     --color-warm-grey: #909090;
     --color-white: #ffffff;
     --color-dark-lilac: #B87E70;
@@ -27,7 +27,7 @@
   
     /* FONTS */
   
-    --font-title-brand: 300 1.4rem 'Poppins', sans-serif;
+    --font-title-brand: 300 1.4rem 'Poppins', 'Dancing Script', cursive;
     --font-title-biggest: bold 3rem 'Montserrat', sans-serif;
     --font-title-big: bold 2rem 'Montserrat', sans-serif;
     --font-title-medium: 300 1.5rem 'Montserrat', sans-serif;
@@ -82,14 +82,15 @@
   }
   
   .header .header__companyLogo {
-    height: 31px;
+    height: 50px;
     color: var(--color-white);
   }
   
   .header .header__title {
     font: var(--font-title-brand);
     text-transform: capitalize;
-    color: var(--color-white);
+    color: #585E48;
+    font-size: 20px;
   }
   
   @media screen and (min-width: 768px) {
@@ -105,6 +106,7 @@
   
   .hero {
     margin-bottom: 3rem;
+    color: #585E48
   }
   
   @media screen and (min-width: 768px) {
@@ -351,7 +353,7 @@
   }
   
   .logoSponsor {
-    height: 46px;
+    height: 100px;
   }
   
   .button--link {

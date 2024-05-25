@@ -1,15 +1,15 @@
 
-import companyLogo from '../images/laptop-code-solid.svg';
-import logoSponsor from '../images/adalab.png';
+
+import logoSponsor from '../images/logo-wedding.png';
 
 function Header() {
   return (
     <header className="header">
           <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
-            <img className="header__companyLogo" src={companyLogo} alt="Logo proyectos molones"/>
-            <h1 className="header__title">Proyectos molones</h1>
+       
+            <h1 className="header__title">Ada_Moon_Wedding</h1>
           </a>
-          <img className="logoSponsor" src={logoSponsor} alt="Logo Adalab"/>
+          <img className="logoSponsor" src={logoSponsor} alt="Logo"/>
     </header>
   )
 }
