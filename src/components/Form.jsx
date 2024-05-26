@@ -3,7 +3,7 @@ import Reset from "./Reset";
 
 
 
-function Form({form, updateAvatar, formData, postData, url, setData}) {
+function Form({form, updateAvatar, formData, postData, url, setData, setUrl}) {
   
     const handleInputChange =(event)=>{
       const id = event.target.id;
@@ -16,7 +16,8 @@ function Form({form, updateAvatar, formData, postData, url, setData}) {
       
     }
 
-     
+    const urlText = url !== '' ? `Pulsa aquí para ver tu invitación: ${url}`: "";
+    const urlTextClass = url !== ''? 'urlText':"";
     
 
   return (
@@ -27,8 +28,8 @@ function Form({form, updateAvatar, formData, postData, url, setData}) {
         <input className="addForm__input" type="text" value={formData.name} name="name" id="name" placeholder="Nombre de los invitados" onChange={handleInputChange}/>
         <input className="addForm__input" type="text" name="slogan" id="slogan" placeholder="Fecha del enlace" value={formData.slogan} onChange={handleInputChange}/>
         <div className="addForm__2col">
-          <input className="addForm__input" type="url" name="repo" id="repo" placeholder="Url ubicación" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
-          <input className="addForm__input" type="url" name="demo" id="demo" placeholder="Lista de regalos" onChange={handleInputChange}/>
+          <input className="addForm__input" type="url" name="repo" value={formData.repo} id="repo" placeholder="Url ubicación" onChange={handleInputChange}/> {/* url de lista de regalo, google maps */}
+          <input className="addForm__input" type="url" name="demo" value={formData.demo} id="demo" placeholder="Lista de regalos" onChange={handleInputChange}/>
         </div>         
         <input className="addForm__input" type="text" value={formData.technologies} name="technologies" id="technologies" placeholder="Escribe aquí cómo quieres que contacten tus invitados" onChange={handleInputChange}/> {/* podría ser un select de si necesitas bus o no */}
         <textarea className="addForm__input" type="text" name="desc" id="desc" placeholder="Dedica unas palabras a tus invitados" value={formData.desc} rows="5" onChange={handleInputChange}></textarea>
@@ -44,10 +45,9 @@ function Form({form, updateAvatar, formData, postData, url, setData}) {
         <Button  labelText="Subir foto que os represente"   id="image"updateAvatar={updateAvatar}/>
         <Button  labelText="Subir foto vuestra"   id="photo" updateAvatar={updateAvatar}/>
         <button className="button--large" onClick= {handleClickUrl}>Crear invitación</button>
-       <Reset setData={setData}/>
-        <p>{url}</p>
+       <Reset setUrl={setUrl} setData={setData}/>
       </fieldset>
-      
+      <a className={urlTextClass} href={url} target="_blank">{urlText}</a>
     </form>
   )
 }
