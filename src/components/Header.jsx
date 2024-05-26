@@ -1,6 +1,6 @@
 
 
-import logoSponsor from '/public/images/logo-wedding.png';
+import logoSponsor from '/images/logo-wedding.png';
 
 function Header() {
   return (
