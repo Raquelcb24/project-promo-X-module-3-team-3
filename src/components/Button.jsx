@@ -61,7 +61,7 @@ function Button({ updateAvatar, labelText, id}) {
 
   return (
     <div>
-        <label htmlFor={id} className="button">{labelText}</label>
+        <label htmlFor={id} className="button--large">{labelText}</label>
         <input className="addForm__hidden" type="file" name={id}  id={id} onChange={uploadImage}  ref={myFileField}/>
     </div>
   )

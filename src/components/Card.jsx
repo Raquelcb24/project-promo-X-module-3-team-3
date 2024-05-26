@@ -1,5 +1,5 @@
 
-import proyect from '/images/perretes1.jpeg';
+import proyect from '/images/example.jpg';
 import autor from '/images/avatar2.jpeg'; 
 
 
