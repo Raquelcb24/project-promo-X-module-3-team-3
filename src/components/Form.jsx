@@ -1,6 +1,7 @@
 import Button from "./Button";
 
 
+
 function Form({form, updateAvatar, formData, postData, url}) {
   
     const handleInputChange =(event)=>{
@@ -42,6 +43,7 @@ function Form({form, updateAvatar, formData, postData, url}) {
         <Button  labelText="Subir foto que os represente"   id="image"updateAvatar={updateAvatar}/>
         <Button  labelText="Subir foto vuestra"   id="photo" updateAvatar={updateAvatar}/>
         <button className="button--large" onClick= {handleClickUrl}>Crear invitación</button>
+       
         <p>{url}</p>
       </fieldset>
       
