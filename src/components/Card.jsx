@@ -1,6 +1,6 @@
 
-import proyect from '../images/perretes1.jpeg';
-import autor from '../images/avatar2.jpeg'; 
+import proyect from '/public/images/perretes1.jpeg';
+import autor from '/public/images/avatar2.jpeg'; 
 
 
 function Card({formData}) {
