@@ -37,7 +37,6 @@ React Router
 Prop-types
 npm
 Git
-API: https://rickandmortyapi.com/documentation/#get-all-characters
 
 ## ​👰🏻‍♀️​​**Nuestro equipo**​👰🏻‍♀️​​
 
