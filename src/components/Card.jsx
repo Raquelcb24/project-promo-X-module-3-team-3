@@ -31,7 +31,7 @@ function Card({formData}) {
         <div className="card__project">            
           <h3 className="card__name">{formData.name || "Nombre de los invitados"}</h3>
           <p className="card__slogan">{formData.slogan || "Fecha del enlace"}</p>
-          <h3 className="card__descriptionTitle">Información del evento</h3>
+        {/*   <h3 className="card__descriptionTitle">Información del evento</h3> */}
           <p className="card__description">{formData.desc || "Unas bonitas palabras para tus invitados"} </p>
 
           <div className="card__technicalInfo">
