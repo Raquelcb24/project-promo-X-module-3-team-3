@@ -20,7 +20,6 @@ function App() {
         <Routes>
             <Route path= "/" element={<LandingPage/>} />
             <Route path="/main" element={<Page/> }/>
-            
             <Route path="*" element={ <p>Página no encontrada</p> } />
         </Routes>
        <Footer/>
