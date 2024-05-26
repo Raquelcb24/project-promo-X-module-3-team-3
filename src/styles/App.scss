@@ -367,6 +367,11 @@
     flex-wrap: wrap;
     margin-bottom: 25px;
   }
+  @media all and (min-width: 1024px){
+    .addForm .addForm__group--upload{
+      justify-content: space-evenly;
+    }
+  }
   
   .addForm .addForm__hidden {
     display: none;
@@ -446,6 +451,8 @@
   
     cursor: pointer;
   }
+
+
   
   .button--large {
     display: block;

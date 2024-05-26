@@ -5,9 +5,9 @@ function Reset({setData}) {
       
     }
   return (
-    <div>
+    
         <button className='button--large' onClick={handleReset}>Reset</button>
-    </div>
+    
    
   )
 }
